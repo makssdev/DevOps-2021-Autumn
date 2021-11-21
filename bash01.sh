@@ -16,7 +16,7 @@
 if id "$1" &>/dev/null; then
     if [ -d "$2" ]; then
     echo "Chown, user $1 , has a new directory: ${2}"
-    chown -R $1 $2
+    chown -R $1:$1 $2
     else
     echo "Error: Directory ${2} not found. Can not continue."
     exit 1
